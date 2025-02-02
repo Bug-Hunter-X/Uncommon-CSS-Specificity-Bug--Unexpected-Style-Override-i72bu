@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates an uncommon error related to the specificity of CSS selectors and the cascading nature of stylesheets.  The unexpected behavior is caused by an improperly nested selector that overrides a more specific selector due to the order of the stylesheets or the selector's position within the stylesheet.
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+.container .inner {
+  background-color: lightgreen; /* This style is overridden unexpectedly */
+}
+
+.inner {
+  background-color: lightcoral; /* This style unexpectedly takes precedence */
+}
+```
