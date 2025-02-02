@@ -1,0 +1,34 @@
+The solution involves either re-ordering the CSS rules to ensure that the more specific selector is declared later or making the more specific selector more specific to overcome the cascade.
+
+Here's the corrected CSS:
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+.inner {
+  background-color: lightcoral; 
+}
+
+.container .inner {
+  background-color: lightgreen; /* Now this style correctly takes precedence */
+}
+```
+
+Alternatively:
+
+```css
+.container {
+  background-color: lightblue;
+}
+
+.container .inner {
+  background-color: lightgreen; /*This style is now correctly applied*/
+}
+
+.inner {
+  background-color: lightcoral; /*This will not affect elements within the container*/
+}
+```
+By re-ordering or making the more specific selector's specificity higher, the expected styling is achieved.
